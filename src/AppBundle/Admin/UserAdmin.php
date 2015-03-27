@@ -32,7 +32,6 @@ class UserAdmin extends Admin
                 ],
                 'data' => true === $isNew ? User::GENDER_FEMALE : $this->getSubject()->getGender(),
             ])
-            ->add('review')
         ;
     }
 
@@ -48,7 +47,6 @@ class UserAdmin extends Admin
                     \AppBundle\Entity\User::GENDER_FEMALE =>'female',
                 ]
             ])
-            ->add('review')
         ;
     }
 
@@ -72,7 +70,6 @@ class UserAdmin extends Admin
                     'delete' => []
                 ]
             ])
-            ->add('review')
         ;
     }
     protected function configureShowFields(ShowMapper $showMapper)
@@ -83,7 +80,6 @@ class UserAdmin extends Admin
             ->add('lastname')
             ->add('birthday')
             ->add('gender')
-            ->add('review')
         ;
     }
 }

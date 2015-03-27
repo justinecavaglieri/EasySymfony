@@ -53,13 +53,6 @@ class User
     const GENDER_FEMALE = false;
 
     /**
-     * @var review
-     *
-     * @ORM\ManyToOne(targetEntity="Review", cascade={"persist"})
-     */
-    private $review;
-
-    /**
      * Get id
      *
      * @return integer 
@@ -162,26 +155,11 @@ class User
     }
 
     /**
-     * Set review
-     *
-     * @param Review $review
-     * @return User
+     * @return string
      */
-    public function setReview(Review $review = null)
+    public function __toString()
     {
-        $this->review = $review;
-
-        return $this;
-    }
-
-    /**
-     * Get review
-     *
-     * @return Review
-     */
-    public function getReview()
-    {
-        return $this->review;
+        return $this->getLastname().' '.$this->getFirstname();
     }
 
 }

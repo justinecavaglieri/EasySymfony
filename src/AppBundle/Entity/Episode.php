@@ -59,7 +59,7 @@ class Episode
     /**
      * @var season
      *
-     * @ORM\ManyToOne(targetEntity="Season", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Season")
      */
     private $season;
 

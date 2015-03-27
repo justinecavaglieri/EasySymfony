@@ -37,6 +37,18 @@ class Review
     private $rating;
 
     /**
+     * @var User
+     * @ORM\ManyToOne(targetEntity="User")
+     */
+    private $user;
+
+    /**
+     * @var Series
+     * @ORM\ManyToOne(targetEntity="Series")
+     */
+    private $series;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -91,6 +103,53 @@ class Review
     {
         return $this->rating;
     }
+
+    /**
+     * Set user
+     *
+     * @param User $user
+     * @return Review
+     */
+    public function setUser(User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set series
+     *
+     * @param Series $series
+     * @return Review
+     */
+    public function setSeries(Series $series = null)
+    {
+        $this->series = $series;
+
+        return $this;
+    }
+
+    /**
+     * Get series
+     *
+     * @return Series
+     */
+    public function getSeries()
+    {
+        return $this->series;
+    }
+
     /**
      * @return string
      */
@@ -98,5 +157,4 @@ class Review
     {
         return $this->content;
     }
-
 }
