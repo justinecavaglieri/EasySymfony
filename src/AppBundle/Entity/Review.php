@@ -91,6 +91,12 @@ class Review
     {
         return $this->rating;
     }
-    
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->content;
+    }
 
 }

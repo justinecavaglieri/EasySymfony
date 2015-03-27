@@ -185,6 +185,6 @@ class Season
      */
     public function __toString()
     {
-        return $this->name;
+        return $this->getSeries()->getName().' - season'.$this->getNumber();
     }
 }
